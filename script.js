@@ -14,8 +14,9 @@ document.querySelector(".check").addEventListener("click", function () {
     displayMessage("⛔️ No number");
   } else if (guess === secretNumber) {
     displayMessage("🥳 Correct number");
-    document.querySelector("body").style.backgroundColor = "green";
+    document.querySelector(".number").innerHTML = secretNumber;
     document.querySelector(".number").style.width = "30rem";
+    document.querySelector("body").style.backgroundColor = "green";
 
     if (score > highScore) {
       highScore = score;
